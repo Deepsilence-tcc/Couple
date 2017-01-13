@@ -13,16 +13,15 @@ import ScrollableTable from 'react-native-scrollable-tab-view';
 import MyTabBar from './myTabBar'
 
 export default class ScrollBar extends React.Component {
-
-
     render() {
         var list = this.props;
 
         return (
             <ScrollableTable
                 renderTabBar={() => <MyTabBar textStyle={styles.tabText}/>}
-                children={this.renderChildren(this.props.list)}
-            />
+            >
+
+            </ScrollableTable>
         )
     }
 
@@ -31,7 +30,6 @@ export default class ScrollBar extends React.Component {
             list.map((item)=> {
                 return (
                     <ScrollView tabLabel={item.name}>
-                        <Text>{item.name}</Text>
                     </ScrollView>
                 )
             })
@@ -44,6 +42,6 @@ export default class ScrollBar extends React.Component {
 const styles = StyleSheet.create({
 
     tabText: {
-        fontSize: 10,
+        fontSize: 13,
     }
 })

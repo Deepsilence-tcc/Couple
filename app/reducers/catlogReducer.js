@@ -4,11 +4,9 @@
 import *as Types from '../actions/action_type';
 
 const initialState ={
-
     catalogs:[],
-    count:0
+    isLoading:true
 }
-
 let catalogReducer = (state=initialState,action)=>{
 
     switch (action.type){
@@ -19,7 +17,7 @@ let catalogReducer = (state=initialState,action)=>{
         case Types.RECEIVE_CATALOG:
             return Object.assign({},state,{
                 catalogs:action.catalogs,
-                count:action.count
+                isLoading:action.isLoading
             });
         default:
             return state;

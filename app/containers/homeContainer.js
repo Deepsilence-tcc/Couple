@@ -17,9 +17,9 @@ class HomeContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    const  mainData = state.catalogReducer;
+    const contentData = state.contentReducer;
     return {
-        mainData
+        contentData
     }
 }
 export default connect(mapStateToProps)(HomeContainer);
